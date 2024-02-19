@@ -11,19 +11,33 @@ use Getopt::Long;
 
 # Initiate
 my $ch;
+my $maf = 0.10;
+my $pad = 5000;
 GetOptions(
-	"c|chr" => \$ch
+	"c|chr" => \$ch,
+	"m|maf=f" => \$maf,
+	"p|pad=i" => \$pad
 ) or die("Error in command line arguments");
 
 my $xls = $ARGV[0]; # path/to/myfile.xls(x) with genomic coordinates of regions
-my $pad = 5000;
-my $maf = 0.10;
 my $cfg = "res.cfg";
 my $dirname = dirname(__FILE__);
 my %path = read_resources("$dirname/$cfg");
 
+# Check input
+unless (defined $xls) {
+	print "path/to/file.xls isn't defined\n";
+	exit 0;
+}	
+
+if (! -e $xls ) {
+	print "$xls doesn't exist\n" ;
+	exit 1;
+}
+
 # Show input
 print "Input: $xls\n";
+print "maf: $maf\npad: $pad\n";
 
 # Load data
 my $reg = ReadData($xls);
