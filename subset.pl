@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # Subset SNPs from 1000 Genomes project, filter by MAF
-# The outpup files are created in the working folder
+# The output files are created in the working folder
 # The file with resources (res.cfg) should be at the same folder as the script
 # Author: Gennady Khvorykh, info@inzilico.com
 use strict; use warnings;
