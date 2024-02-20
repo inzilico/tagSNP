@@ -61,7 +61,7 @@ sub subset {
   	my ($gene, $chr, $start, $end) = @_;
   	# Subset SNPs by region and MAF
 	print "Subsetting $gene $chr:$start-$end\n";
-	my $cmd = "$path{plink} --bfile $pref --chr $chr --from-bp $start --to-bp $end --maf $maf --make-bed --out $gene";
+	my $cmd = "$path{plink} --bfile $pref --chr $chr --from-bp $start --to-bp $end --maf $maf --nonfounders --make-bed --out $gene";
 	system($cmd) == 0 or die "Failed to subset SNPs by region and MAF!";
 	# Output allele frequncies
 	$cmd = "$path{plink} --bfile $gene --freq --nonfounders --out $gene";
