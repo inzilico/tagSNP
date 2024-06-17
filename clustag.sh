@@ -32,11 +32,12 @@ done < $(dirname "$0")/${res}
 [ ! -d temp ] && mkdir temp
 
 # Run clustag
-java -cp ${tools[clustag]}/TaggingsetChooser_v2.jar:mail.jar \
+java -cp ${tools[clustag]}/TaggingsetChooser.jar:mail.jar \
   -d64 -Xms512m -Xmx4g \
   hk.hku.csis.biosphere.algorithm.TaggingSetChooser \
   sim=hk.hku.csis.biosphere.similarityscore.SimilarityMatrix \
-  link=C threshold=0.8 \
+  link=C \
+  threshold=0.8 \
   data=${id}.data \
   corr=${id}.r2 \
   pos=${id}.maf \
