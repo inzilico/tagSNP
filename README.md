@@ -19,7 +19,7 @@ We assume that the paths to the softwares applied in the scripts below are in th
 
 # Softwares
 
-* **Clustag** is hierarchical clustering and graph methods for selecting tagSNPs. It is emplemented in Java. [website](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm).
-* **Haploview 4.2** runs haplotype analysis [website](https://www.broadinstitute.org/haploview/haploview). It also implements Paul de Bakker's [Tagger](https://software.broadinstitute.org/mpg/tagger/) tagSNP selection algorithm.
-The [command line options](https://www.broadinstitute.org/haploview/chapter-3-command-line-options) of the tool allows to apply it in scripts.  
+* **Clustag** is hierarchical clustering and graph methods for selecting tagSNPs. It is emplemented in Java. [Website](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm).
+* **Haploview 4.2** runs haplotype analysis. [Website](https://www.broadinstitute.org/haploview/haploview). It also implements Paul de Bakker's [Tagger](https://software.broadinstitute.org/mpg/tagger/) tagSNP selection algorithm.
+The [command line options](https://www.broadinstitute.org/haploview/chapter-3-command-line-options) of the tool allow to apply it in scripts.  
 
