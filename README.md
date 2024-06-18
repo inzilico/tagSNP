@@ -8,7 +8,7 @@ The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the sof
 ## Subset SNPs 
 
 * **subset.pl** subsets SNPs from CEU population of [1000 Genomes project](https://www.internationalgenome.org) by genomic coordinates and MAF.
-* **subset-from-plink.pl** subset SNPs from [Plink 1.9](https://www.cog-genomics.org/plink) binary files by genomic coordinates and MAF.
+* **subset-from-plink.pl** subsets SNPs from [Plink 1.9](https://www.cog-genomics.org/plink) binary files by genomic coordinates and MAF.
 
 ## tagSNP identification 
 
