@@ -25,7 +25,7 @@ The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the sof
 [Clustag v2](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm) is a software that applies hierarchical clustering and graph methods for selecting tagSNPs. It is emplemented in Java.
 
 * **2clustag.R** creates input files for Clustag from vcf-file. [bcftools]() should be in $PATH global variable. 
-* **clustag.sh** is a wrapper script for running Clustag.
+* **clustag.sh** is a wrapper script for running Clustag. It should be lanched from the same folder as input data.
 
 
 ### gpart R package
