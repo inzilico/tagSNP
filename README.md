@@ -26,7 +26,7 @@ The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the sof
 
 * **2clustag.R** creates input files for Clustag from vcf-file. [bcftools]() should be in $PATH global variable. 
 * **clustag.sh** is a wrapper script for running Clustag. It should be lanched from the same folder as input data.
-
+* **proc-clustag-02.py** post-process *.out file created with Clustag
 
 ### gpart R package
 
