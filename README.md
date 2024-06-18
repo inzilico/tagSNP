@@ -3,7 +3,7 @@
 ## Description
 
 The repo contains scripts to automate the identification of tagging single nucleotide polymorphisms (tagSNP) with different approaches and softwares.
-The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts are in the `res.cfg` file located at the folder with the script. Each row of the file has the software name and the path to the software seperated by comma.
+The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts are in the `res.cfg` file located at the folder with the script. Each row of the file has the software name and the path to the software seperated by comma. Please, use the links to the software websites to find out how to install them.
 
 ## Subset SNPs 
 
