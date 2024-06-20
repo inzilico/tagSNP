@@ -37,6 +37,7 @@ The [article](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) 
 
 ## Other scripts and files
 
+* **count-submatrix-features.py** counts mean, median, rho and determinant of LD submatrices.   
 * **functions.py** contains functions to assist data processing with scripts in Python 3.8.
 * **make-ld-matrix.py** creats LD matrix under text and HD5F formats from hap.ld file with r2 values obtained with [vcftools](https://vcftools.github.io/index.html). 
 
