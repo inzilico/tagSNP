@@ -44,7 +44,7 @@ The [article](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) 
 python3 make-ld-matrix.py path/to/prefix
 
 ``` 
-`prefix` correspond to prefix.hap.ld and prefix.vcf files. 
+`prefix` corresponds to prefix.hap.ld and prefix.vcf files. 
 
 The files prefix.ld, prefix.ld.h5 and prefix.map will be created at the same folder as imput file. prefix.map contains the list of rs IDs with genomic coordinates extracted from prefix.vcf file. 
 
