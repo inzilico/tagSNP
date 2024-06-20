@@ -41,9 +41,11 @@ The [article](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) 
 * **make-ld-matrix.py** creats LD matrix under text and HD5F formats from hap.ld file with r2 values obtained with [vcftools](https://vcftools.github.io/index.html). 
 
 ```bash
-python3 make-ld-matrix.py path/to/prefix, where prefix correspond to prefix.hap.ld and prefix.vcf files. 
+python3 make-ld-matrix.py path/to/prefix
 
 ``` 
-The files prefix.ld, prefix.ld.h5 and prefix.map will be created. The last one contains the list of rs IDs with genomic coordinates extrcted from prefix.vcf file. 
+`prefix` correspond to prefix.hap.ld and prefix.vcf files. 
+
+The files prefix.ld, prefix.ld.h5 and prefix.map will be created at the same folder as imput file. prefix.map contains the list of rs IDs with genomic coordinates extracted from prefix.vcf file. 
 
 * **plot-hist.R** plot the histogram of MAF (minor allele frequencies) counted with [Plink 1.9](https://www.cog-genomics.org/plink/) --freq argument.
