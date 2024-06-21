@@ -1,6 +1,7 @@
 """
 Subset a submatrix from LD matrix and count its features.
-The SNPs in blocks are assumed to be consequitive.
+The SNPs in block are assumed to be consequitive.
+The index file has the index of the first and the last SNP in the block.
 Author: Gennady Khvorykh, info@inzilico.com
 Created: October 18, 2023
 """
