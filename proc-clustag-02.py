@@ -1,5 +1,6 @@
 """
 Post-process the output file (*.out) created by Clustag software.
+Get the distribution of cluster sizes and mean values of r2 between tagSNP and other SNPs in cluster. 
 Author: Gennady Khvorykh, info@inzilico.com
 Created: June 18, 2024
 """
