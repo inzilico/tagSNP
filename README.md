@@ -19,6 +19,7 @@ The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the sof
 * **vcf2haploview.R** converts vcf files into input files for Haploview.
 * **run-tagger.py** a wrapper script to find out tagSNP with Tagger algorithm from Haploview. 
 * **proc-tags.py** post-process TAGS created by Haploview.
+* **proc-haploview-tags-01.py** defines the indexes of SNPs tagged by tagSNPs given in ped.TAGS file created by Haploview. 
 
 ### Clustag 2
 
@@ -37,7 +38,8 @@ The [article](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) 
 
 ## Other scripts and files
 
-* **count-submatrix-features.py** counts mean, median, rho and determinant of LD submatrices.   
+* **count-submatrix-features.py** counts mean, median, rho and determinant of LD submatrices composed of consequitive SNPs.
+* **count-mosaic-submatrix-features.py** counts mean, median, rho and determinant of LD submatrices composed on SNPs not necessarily consequitive.   
 * **functions.py** contains functions to assist data processing with scripts in Python 3.8.
 * **make-ld-matrix.py** creats LD matrix under text and HD5F formats from hap.ld file with r2 values obtained with [vcftools](https://vcftools.github.io/index.html). 
 
