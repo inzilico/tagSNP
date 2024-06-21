@@ -29,7 +29,7 @@ The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the sof
 * **clustag.sh** is a wrapper script for running Clustag. It should be lanched from the same folder as input data.
 * **proc-clustag-01.py** post-process `*.members.txt` file created by Clustag software. Get sizes of clusters. 
 * **proc-clustag-02.py** post-process `*.out` file created with Clustag. Get the distribution of cluster sizes and mean values of r2 between tagSNP and other SNPs in a cluster.
-* **proc-clustag-03.py** defines the indexes of SNPs tagged by tagSNPs given in `*.out` file. 
+* **proc-clustag-03.py** defines the indexes of tagged SNPs given in `*.out` file. 
  
 ### gpart R package
 
