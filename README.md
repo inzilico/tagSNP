@@ -56,3 +56,10 @@ python3 make-ld-matrix.py path/to/prefix
 The files prefix.ld, prefix.ld.h5 and prefix.map will be created at the same folder as imput file. prefix.map contains the list of rs IDs with genomic coordinates extracted from prefix.vcf file. 
 
 * **plot-hist.R** plot the histogram of MAF (minor allele frequencies) counted with [Plink 1.9](https://www.cog-genomics.org/plink/) --freq argument.
+
+## Use cases
+
+The scripts in this repo were applied in the following researches:
+
+Khvorykh, G., Khrunin, A., Filippenkov, I., Stavchansky, V., Dergunova, L., Limborska, S. A Workflow for Selection of Single Nucleotide Polymorphic Markers for Studying of Genetics of Ischemic Stroke Outcomes. Genes 2021, 12, 328. https://doi.org/10.3390/genes12030328 
+
