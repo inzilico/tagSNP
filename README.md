@@ -36,6 +36,11 @@ The repo contains scripts to automate the identification of tagging single nucle
 
 * **vcf2gpart.R** converts vcf into geno/info files for gpart. The R package [VariantAnnotation](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to process vcf file is required.
 
+```bash
+vcf2gpart.R path/to/mydata.vcf path/to/folder
+```
+path/to/folder is the path to folder to save output geno/info files. 
+
 ## Other scripts and files
 
 * **count-submatrix-features.py** counts mean, median, rho and determinant of LD submatrices composed of consequitive SNPs.
