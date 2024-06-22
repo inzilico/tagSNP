@@ -32,7 +32,7 @@ The repo contains scripts to automate the identification of tagging single nucle
  
 ### gpart R package 1.2.0
 
-[gpart R package](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html) is the implementation of [BIG-LD](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) approch, a block partition method based on interval graph modeling of LD bins which are clusters of strong pairwise LD SNPs, not necessarily physically consecutive.
+[gpart R package](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html) is the implementation of BIG-LD method ([Kim et al., 2018](https://academic.oup.com/bioinformatics/article/34/3/388/4282661)), a block partition method based on interval graph modeling of LD bins which are clusters of strong pairwise LD SNPs, not necessarily physically consecutive.
 
 * **vcf2gpart.R** converts vcf into geno/info files for gpart. The R package [VariantAnnotation](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to process vcf file is required.
 
