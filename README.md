@@ -42,7 +42,7 @@ vcf2gpart.R path/to/mydata.vcf path/to/output_folder
 * **run-gpart.R** is a wrapper script to apply BIG-LD with gpart.  
 
 ```bash
-run-gpart.R <input>
+Rscript run-gpart.R <input>
 ```
 input: path/to/prefix of prefix.{info,geno} files
 
