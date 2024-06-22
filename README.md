@@ -36,7 +36,7 @@ The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the sof
 [gpart R package](https://github.com/sunnyeesl/BigLD?tab=readme-ov-file) is the implementation of BIG-LD approch, a block partition method based on interval graph modeling of LD bins which are clusters of strong pairwise LD SNPs, not necessarily physically consecutive.
 The [article](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) provides more details on the method.
 
-* **vcf2gpart.R** convert vcf to input files for gpart. The R package [VariantAnnotation](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) should be installed.
+* **vcf2gpart.R** convert vcf to input files for gpart. The R package [VariantAnnotation](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to process vcf file is required.
 
 ## Other scripts and files
 
