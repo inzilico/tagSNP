@@ -1,5 +1,6 @@
 #!/usr/bin/Rscript
-## Convert vcf files for for gpart R package 
+## Convert vcf file to geno/info files for gpart R package.
+## VariantAnnotation package should be installed.
 ## Usage: vcf2gpart <input> <output>
 ##        input: path/to/mydata.vcf
 ##        output: path/to/folder to save the output
