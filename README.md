@@ -39,6 +39,12 @@ The repo contains scripts to automate the identification of tagging single nucle
 ```bash
 vcf2gpart.R path/to/mydata.vcf path/to/output_folder
 ```
+* **run-gpart.R** is a wrapper script to apply BIG-LD with gpart.  
+
+```bash
+run-gpart.R <input>
+```
+input: path/to/prefix of prefix.{info,geno} files
 
 ## Other scripts and files
 
