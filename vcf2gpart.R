@@ -3,13 +3,10 @@
 ## Usage: vcf2gpart <input> <output>
 ##        input: path/to/mydata.vcf
 ##        output: path/to/folder to save the output
+## Author: Gennady Khvorykh, info@inzilico.com
 
 suppressPackageStartupMessages(require(dplyr)) 
 args <- commandArgs(TRUE)
-
-# TODO: comment after debugg
-# args[1] <- "~/data/ortho/maf10/CPLX2.vcf"
-# args[2] <- "~/data/ortho/maf10/gp/CPLX2"
 
 # Check arguments provided
 if(length(args) < 2) stop("Missing arguments...", call. = F)
@@ -76,5 +73,3 @@ geno <- t(geno)
 
 data.table::fwrite(geno, sprintf("%s/%s.geno", output, id), 
                    col.names = T, sep = " ", verbose = F)
-
-
