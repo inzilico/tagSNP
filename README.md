@@ -2,8 +2,7 @@
 
 ## Description
 
-The repo contains scripts to automate the identification of tagging single nucleotide polymorphisms (tagSNP) with different approaches and softwares.
-The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts are in the `res.cfg` file located at the folder with the script. Each row of the file has the software name and the path to the software seperated by comma. Please, use the links to the software websites to find out how to install them.
+The repo contains scripts to automate the identification of tagging single nucleotide polymorphisms (tagSNP) with [Haploview 4.2](https://www.broadinstitute.org/haploview/haploview), [Clustag v2](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm), and [gpart R package](https://github.com/sunnyeesl/BigLD?tab=readme-ov-file). The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts and other resources are in the `res.cfg` file located at the folder with the scripts. Each row of the file has the software name and the path to the software seperated by comma. Please, use the links to the software websites to find out how to install them.
 
 ## Subset SNPs 
 
