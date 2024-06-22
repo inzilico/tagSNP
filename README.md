@@ -2,7 +2,7 @@
 
 ## Description
 
-The repo contains scripts to automate the identification of tagging single nucleotide polymorphisms (tagSNP) with [Haploview 4.2](https://www.broadinstitute.org/haploview/haploview), [Clustag v2](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm), and [gpart R package](https://github.com/sunnyeesl/BigLD?tab=readme-ov-file). The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts and other resources are in the `res.cfg` file located at the folder with the scripts. Each row of the file has the software name and the path to the software seperated by comma. Please, use the links to the software websites to find out how to install them.
+The repo contains scripts to automate the identification of tagging single nucleotide polymorphisms (tagSNP) with [Haploview 4.2](https://www.broadinstitute.org/haploview/haploview), [Clustag v2](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm), and [gpart R package 1.2.0](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html). The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts and other resources are in the `res.cfg` file located at the folder with the scripts. Each row of the file has the software name and the path to the software seperated by comma. Please, use the links to the software websites to find out how to install them.
 
 ## Subset SNPs 
 
@@ -30,10 +30,9 @@ The repo contains scripts to automate the identification of tagging single nucle
 * **proc-clustag-02.py** post-process `*.out` file created with Clustag. Get the distribution of cluster sizes and mean values of r2 between tagSNP and other SNPs in a cluster.
 * **proc-clustag-03.py** defines the indexes of tagged SNPs given in `*.out` file. 
  
-### gpart R package
+### gpart R package 1.2.0
 
-[gpart R package](https://github.com/sunnyeesl/BigLD?tab=readme-ov-file) is the implementation of BIG-LD approch, a block partition method based on interval graph modeling of LD bins which are clusters of strong pairwise LD SNPs, not necessarily physically consecutive.
-The [article](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) provides more details on the method.
+[gpart R package](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html) is the implementation of [BIG-LD](https://academic.oup.com/bioinformatics/article/34/3/388/4282661) approch, a block partition method based on interval graph modeling of LD bins which are clusters of strong pairwise LD SNPs, not necessarily physically consecutive.
 
 * **vcf2gpart.R** converts vcf into geno/info files for gpart. The R package [VariantAnnotation](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to process vcf file is required.
 
