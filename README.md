@@ -61,5 +61,10 @@ The files prefix.ld, prefix.ld.h5 and prefix.map will be created at the same fol
 
 The scripts in this repo were applied in the following researches:
 
+Khrunin, A.V.; Khvorykh, G.V.; Arapova, A.S.; Kulinskaya, A.E.; Koltsova, E.A.; Petrova, E.A.; Kimelfeld, E.I.; Limborska, S.A. The Study of the Association of Polymorphisms in LSP1, GPNMB, PDPN, TAGLN, TSPO, and TUBB6 Genes with the Risk and Outcome of Ischemic Stroke in the Russian Population. Int. J. Mol. Sci. 2023, 24, 6831. https://doi.org/10.3390/ijms24076831.
+
+Khrunin, A.V.; Khvorykh, G.V.; Rozhkova, A.V.; Koltsova, E.A.; Petrova, E.A.; Kimelfeld, E.I.; Limborska, S.A. Examination of Genetic Variants Revealed from a Rat Model of Brain Ischemia in Patients with Ischemic Stroke: A Pilot Study. Genes 2021, 12, 1938. https://doi.org/10.3390/genes12121938.
+
 Khvorykh, G., Khrunin, A., Filippenkov, I., Stavchansky, V., Dergunova, L., Limborska, S. A Workflow for Selection of Single Nucleotide Polymorphic Markers for Studying of Genetics of Ischemic Stroke Outcomes. Genes 2021, 12, 328. https://doi.org/10.3390/genes12030328 
 
+Khrunin A.V., Khvorykh G.V., Gnatko E.D., Filippenkov I.B., Stavchansky V.V., Dergunova L.V., Limborska S.A. Study of polymorphism of human genes, orthologues of which are functionally involved in the response to experimental brain ischemia in model systems. Medical Genetics. 2020;19(5):83-85. (In Russ.) https://doi.org/10.25557/2073-7998.2020.05.83-85.
