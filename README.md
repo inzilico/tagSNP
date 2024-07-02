@@ -48,6 +48,7 @@ input: path/to/prefix of prefix.{info,geno} files
 
 ## Other scripts and files
 
+* **count-centrality.py** counts Bonacich centrality for weighted undirected graps formed by SNPs in blocks.
 * **count-submatrix-features.py** counts mean, median, rho and determinant of LD submatrices composed of consequitive SNPs.
 * **count-mosaic-submatrix-features.py** counts mean, median, rho and determinant of LD submatrices composed on SNPs not necessarily consequitive.   
 * **functions.py** contains functions to assist data processing with scripts in Python 3.8.
