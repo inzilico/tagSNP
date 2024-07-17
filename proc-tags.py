@@ -1,5 +1,6 @@
 """
-Process TAGS created by Tagger under Haploview software
+Process *.ped.TAGS file created by Tagger under Haploview software
+Parser r2, count size of groups and mean of r2 in them. 
 Author: Gennady Khvorykh, info@inzilico.com
 Creted: June 15, 2024
 """
@@ -25,7 +26,7 @@ def parse_tags_file(x: str):
     df = pd.DataFrame(array)        
     return(df)
 
-# Parser TAGS file created by Haploview 
+# Parser *.ped.TAGS file created by Haploview 
 d1 = parse_tags_file(input_file)
 
 # Convert string to numeric
