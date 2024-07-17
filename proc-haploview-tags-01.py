@@ -1,6 +1,7 @@
 """
-Post-process ped.TAGS file created by Haploview to define the indexes of SNPs tagged by tagSNPs.
-Onle the blocks with two or more tagged SNPs are considered.
+Post-process ped.TAGS file created by Haploview 
+to define the indexes of SNPs tagged by tagSNPs.
+Only the blocks with two or more tagged SNPs are considered.
 Author: Gennady Khvorykh, info@inzilioc.com
 Created: June 20, 2024
 """
