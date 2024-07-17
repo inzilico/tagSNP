@@ -1,4 +1,4 @@
-# Identification of tagSNP 
+# Identification of tagging single nucleotide polymorphisms 
 
 ## Description
 
