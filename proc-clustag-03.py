@@ -1,6 +1,8 @@
 """
 Post-process the output file (*.out) created by Clustag software. 
 Define the indexes of SNPs tagged by tagSNPs and save in *.ind file. 
+tagSNP is included in the list of indexes. 
+The groups of size one are not considered. 
 Author: Gennady Khvorykh, info@inzilico.com
 Created: June 21, 2024
 """
@@ -30,12 +32,12 @@ with open(input_file, "r") as f:
 # Load data
 d1 = pd.read_csv(input_file, sep="\t", skiprows=n, skip_blank_lines=True)
 
-# Correct rs 
+# Remove * from rs ids 
 d1["Name"] = d1["Name"].str.replace("*", "")
 
 # Group SNPs by cluster ID
 d2 = d1.groupby("Cluster")["Name"].apply(list)
-print("No of tagSNP:", len(d2))
+print("Records loaded:", len(d2))
 
 # Get genomic coordinates and rs from vcf file 
 info = []
@@ -53,10 +55,14 @@ d3["ind"] = d3.index + 1
 print("No of SNPs:", d3.shape[0])
 
 # Get indexes and save in the file
+n = 0
 f = open(output_file, "w")
-for test, snps in d2.items():
+for cluster, snps in d2.items():
     if len(snps) == 1: continue
     indexes = [d3.loc[d3["rs"] == rs, "ind"].values[0] for rs in snps]
     indexes.sort()
-    print(test, ",".join(str(i) for i in indexes), file=f)
+    print(cluster, ",".join(str(i) for i in indexes), file=f)
+    n += 1
 f.close()
+
+print("Blocks saved:", n)
