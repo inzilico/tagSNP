@@ -1,5 +1,7 @@
 """
-Estimate tagSNP with Tagger algorithm embeded in Haploview software.
+Estimate tagSNP with Tagger solution implemented in Haploview 4.2 software.
+The pairwise tagging algorithm is applied. 
+The Gabriel blocks are also estimated and LD heatmap is created. 
 Author: Gennady Khvorykh, info@inzilico.com
 Created: June 14, 2024
 """
