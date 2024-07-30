@@ -75,3 +75,5 @@ Khrunin, A.V.; Khvorykh, G.V.; Rozhkova, A.V.; Koltsova, E.A.; Petrova, E.A.; Ki
 Khvorykh, G., Khrunin, A., Filippenkov, I., Stavchansky, V., Dergunova, L., Limborska, S. A Workflow for Selection of Single Nucleotide Polymorphic Markers for Studying of Genetics of Ischemic Stroke Outcomes. Genes 2021, 12, 328. https://doi.org/10.3390/genes12030328 
 
 Khrunin A.V., Khvorykh G.V., Gnatko E.D., Filippenkov I.B., Stavchansky V.V., Dergunova L.V., Limborska S.A. Study of polymorphism of human genes, orthologues of which are functionally involved in the response to experimental brain ischemia in model systems. Medical Genetics. 2020;19(5):83-85. (In Russ.) https://doi.org/10.25557/2073-7998.2020.05.83-85.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12801392.svg)](https://doi.org/10.5281/zenodo.12801392)
