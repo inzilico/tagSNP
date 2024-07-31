@@ -46,6 +46,17 @@ Rscript run-gpart.R <input>
 ```
 input: path/to/prefix of prefix.{info,geno} files
 
+### Tagster 1.0
+
+[Download Tagster](https://www.niehs.nih.gov/research/resources/software/epidemiology/tagster)
+[Article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2782964/)
+
+* **vcf2tagster.py** converts vcf file into input file for Tagster software.
+
+```bash
+python3 vcf2tagster.py -i path/to/filename.vcf -o path/to/filename -g gene_name
+```
+
 ## Other scripts and files
 
 * **count-centrality.py** counts Bonacich centrality for weighted undirected graps formed by SNPs in blocks.
