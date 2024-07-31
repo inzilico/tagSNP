@@ -2,7 +2,7 @@
 
 ## Description
 
-The repo contains scripts to automate the identification of tagging single nucleotide polymorphisms (tagSNP) with [Haploview 4.2](https://www.broadinstitute.org/haploview/haploview), [Clustag v2](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm), and [gpart R package 1.2.0](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html). The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts and other resources are in the `res.cfg` file located at the folder with the scripts. Each row of the file has the software name and the path to the software seperated by comma. Please, use the links to the software websites to find out how to install them.
+The repo contains scripts to automate the identification of tagging single nucleotide polymorphisms (tagSNP) with [Haploview 4.2](https://www.broadinstitute.org/haploview/haploview), [Clustag v2](https://www.engineeringletters.com/editors/SIAO/CLUSTAG/CLUSTAG.htm), [gpart R package 1.2.0](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html), and [Tagster 1.0](https://www.niehs.nih.gov/research/resources/software/epidemiology/tagster). The scripts were tested under Ubuntu 22.04.4 LTS. We assume the paths to the softwares applied in the scripts and other resources are in the `res.cfg` file located at the folder with the scripts. Each row of the file has the software name and the path to the software seperated by comma. Please, use the links to the software websites to find out how to install them.
 
 ## Subset SNPs 
 
@@ -48,10 +48,11 @@ input: path/to/prefix of prefix.{info,geno} files
 
 ### Tagster 1.0
 
-[Download Tagster](https://www.niehs.nih.gov/research/resources/software/epidemiology/tagster)
-[Article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2782964/)
+[Xu at el., 2007](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2782964/)
 
-* **vcf2tagster.py** converts vcf file into input file for Tagster software.
+[Download Tagster](https://www.niehs.nih.gov/research/resources/software/epidemiology/tagster)
+
+* **vcf2tagster.py** converts vcf file with phased genotypes into input file for Tagster software.
 
 ```bash
 python3 vcf2tagster.py -i path/to/filename.vcf -o path/to/filename -g gene_name
