@@ -6,7 +6,7 @@ The repo contains scripts to automate the identification of tagging single nucle
 
 ## Subset SNPs 
 
-* **subset.pl** subsets SNPs from CEU population of [1000 Genomes project](https://www.internationalgenome.org) by genomic coordinates and MAF.
+* **subset.pl** subsets SNPs from vcf file, e.g., downloaded from [1000 Genomes project](https://www.internationalgenome.org), by genomic coordinates and MAF.
 * **subset-from-plink.pl** subsets SNPs from [Plink 1.9](https://www.cog-genomics.org/plink) binary files by genomic coordinates and MAF.
 
 ## tagSNP identification 
