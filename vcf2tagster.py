@@ -2,9 +2,10 @@
 Convert vcf file to input file for tagSNP selection by Tagster software (Xu at el., 2007). 
 The vcf contains phased data of a genomic region from a single chromosome. 
 
-Usage: vcf2tagster.py <input> <output>
+Usage: vcf2tagster.py -i <input> -o <output> -g gene
     input: path/to/filename.vcf
     output: path/to/filename
+    gene: gene id
 
 Author: Gennady Khvorykh, info@inzilico.com
 Created: July 30, 2024
