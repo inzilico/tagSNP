@@ -18,7 +18,6 @@ Bioinformatics. 2007 Dec 1;23(23):3254-5. doi: 10.1093/bioinformatics/btm426.
 Epub 2007 Sep 7. PMID: 17827206; PMCID: PMC2782964.
 """
 
-import os, sys
 import functions
 import argparse
 
