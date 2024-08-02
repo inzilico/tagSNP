@@ -89,8 +89,59 @@ def code_genotypes(x: str):
                     coded.append(-1)    
             out.append([ar[2], ar[1], f'{major}/{minor}', ",".join([str(x) for x in coded]), maf])
     
-    # Create dataframe
-    #df = pd.DataFrame({"chrom": chrom, "pos": pos, "rs": rs})
     return(out)
+
+
+def restore_haplotypes(x: pd.Series, alleles):
+    h1, h2 = [], []
+    for i, gt in enumerate(x):
+        minor, major = alleles[i]
+        a1, a2 = gt.split("|")
+        a1 = int(a1)
+        a2 = int(a2)
+        if a1 == minor: h1.append("1")
+        if a1 == major: h1.append("0")
+        if a2 == minor: h2.append("1")
+        if a2 == major: h2.append("0")    
+    return("|".join([" ".join(h1), " ".join(h2)]))
+    #return(pd.DataFrame({"h1": h1, "h2": h2}))
+    #return(" ".join(h1))
+ 
     
+def get_haplotypes(vcf_file: str):
+    
+    # Create list of tuples with minor, major alleles
+    alleles = []
+    n = 0
+    with open(vcf_file, "r") as f:
+        for line in f:
+            if line.startswith("#"): 
+                n += 1
+                continue
+            line = line.strip()
+            # Get fields
+            ar = line.split("\t")
+            # Subset genotypes
+            gt = ar[9:]
+            # Define minor/major allele
+            vec = []
+            for x in gt:
+                for y in x.split("|"):
+                    vec.append(int(y))
+            freq = sum(vec)/len(vec)             
+            if (freq <= 0.5):
+                minor = 1
+                major = 0
+            else:
+                minor = 0
+                major = 1
+            # Update variants
+            alleles.append((minor, major))
+    print("No of SNPs:", len(alleles))
+    # Load genotypes
+    df = pd.read_csv(vcf_file, sep="\t", header=None, skiprows=n).iloc[:, 9:]
+    # Restore haplotypes
+    res = df.apply(restore_haplotypes, axis="index", raw=True, alleles=alleles)
+    res = res.str.split(pat="|", expand=True)
+    return(res.stack())
     
