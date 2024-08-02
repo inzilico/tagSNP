@@ -30,22 +30,6 @@ The repo contains scripts to automate the identification of tagging single nucle
 * **proc-clustag-02.py** post-process `*.out` file created with Clustag. Get the distribution of cluster sizes and mean values of r2 between tagSNP and other SNPs in a cluster.
 * **proc-clustag-03.py** defines the indexes of tagged SNPs given in `*.out` file. 
  
-### gpart R package 1.2.0
-
-[gpart R package](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html) is the implementation of BIG-LD method ([Kim et al., 2018](https://academic.oup.com/bioinformatics/article/34/3/388/4282661)), a block partition method based on interval graph modeling of LD bins which are clusters of strong pairwise LD SNPs, not necessarily physically consecutive.
-
-* **vcf2gpart.R** converts vcf into geno/info files for gpart. The R package [VariantAnnotation](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to process vcf file is required.
-
-```bash
-vcf2gpart.R path/to/mydata.vcf path/to/output_folder
-```
-* **run-gpart.R** is a wrapper script to apply BIG-LD with gpart.  
-
-```bash
-Rscript run-gpart.R <input>
-```
-input: path/to/prefix of prefix.{info,geno} files
-
 ### Tagster 1.0
 
 [Xu at el., 2007](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2782964/)
@@ -80,6 +64,31 @@ The files prefix.ld, prefix.ld.h5 and prefix.map will be created at the same fol
 ```bash
 python3 vcf2haplotypes.py -i path/to/filename.vcf -o path/to/filename
 ```
+
+### FESTA 2.1
+
+[Download](https://github.com/emorybiostat/FESTA/tree/master/FESTA/download/Ver2.0)
+
+[Qin et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16269414/)
+
+
+## Other softwares
+
+### gpart R package 1.2.0
+
+[gpart R package](https://bioconductor.riken.jp/packages/3.9/bioc/html/gpart.html) is the implementation of BIG-LD method ([Kim et al., 2018](https://academic.oup.com/bioinformatics/article/34/3/388/4282661)), a block partition method based on interval graph modeling of LD bins which are clusters of strong pairwise LD SNPs, not necessarily physically consecutive.
+
+* **vcf2gpart.R** converts vcf into geno/info files for gpart. The R package [VariantAnnotation](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to process vcf file is required.
+
+```bash
+vcf2gpart.R path/to/mydata.vcf path/to/output_folder
+```
+* **run-gpart.R** is a wrapper script to apply BIG-LD with gpart.  
+
+```bash
+Rscript run-gpart.R <input>
+```
+input: path/to/prefix of prefix.{info,geno} files
 
 ## Use cases
 
