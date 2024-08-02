@@ -68,13 +68,18 @@ python3 vcf2tagster.py -i path/to/filename.vcf -o path/to/filename -g gene_name
 
 ```bash
 python3 make-ld-matrix.py path/to/prefix
-
 ``` 
 `prefix` corresponds to prefix.hap.ld and prefix.vcf files. 
 
 The files prefix.ld, prefix.ld.h5 and prefix.map will be created at the same folder as imput file. prefix.map contains the list of rs IDs with genomic coordinates extracted from prefix.vcf file. 
 
 * **plot-hist.R** plot the histogram of MAF (minor allele frequencies) counted with [Plink 1.9](https://www.cog-genomics.org/plink/) --freq argument.
+
+* **vcf2haplotypes.py** outputs haplotypes from phased vcf file. The minor allele is coded as 1 and the major as 0.
+
+```bash
+python3 vcf2haplotypes.py -i path/to/filename.vcf -o path/to/filename
+```
 
 ## Use cases
 
