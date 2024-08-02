@@ -42,6 +42,13 @@ The repo contains scripts to automate the identification of tagging single nucle
 python3 vcf2tagster.py -i path/to/filename.vcf -o path/to/filename -g gene_name
 ```
 
+### FESTA 2.1
+
+[Download](https://github.com/emorybiostat/FESTA/tree/master/FESTA/download/Ver2.0)
+
+[Qin et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16269414/)
+
+
 ## Other scripts and files
 
 * **count-centrality.py** counts Bonacich centrality for weighted undirected graps formed by SNPs in blocks.
@@ -65,11 +72,6 @@ The files prefix.ld, prefix.ld.h5 and prefix.map will be created at the same fol
 python3 vcf2haplotypes.py -i path/to/filename.vcf -o path/to/filename
 ```
 
-### FESTA 2.1
-
-[Download](https://github.com/emorybiostat/FESTA/tree/master/FESTA/download/Ver2.0)
-
-[Qin et al., 2006](https://pubmed.ncbi.nlm.nih.gov/16269414/)
 
 
 ## Other softwares
