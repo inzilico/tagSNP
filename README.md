@@ -42,7 +42,7 @@ The repo contains scripts to automate the identification of tagging single nucle
 python3 vcf2tagster.py -i path/to/filename.vcf -o path/to/filename -g gene_name
 ```
 
-### FESTA 2.1
+### FESTA 2.0
 
 [Download](https://github.com/emorybiostat/FESTA/tree/master/FESTA/download/Ver2.0)
 
