@@ -1,2 +1,7 @@
 res.cfg
 __pycache__
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.vcf
