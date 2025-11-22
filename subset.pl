@@ -54,34 +54,43 @@ foreach my $i (1 .. $#rows) {
 }
 
 sub subset {
-  # Get arguments
-  my ($gene, $chr, $start, $end) = @_;
-  my $vcf = "$path{vcf}/CEU.chr$chr.vcf.gz";
-	return unless -e $vcf;
+	# Get arguments
+	my ($gene, $chr, $start, $end) = @_;
+
+	# Assign variables
+	my $vcf1 = "$path{vcf}/CEU.chr$chr.vcf.gz";
+	my $vcf2 = "$gene.vcf";
+
+	# Check input file exists
+	return unless -e $vcf1;
 
 	# Correct chromosome id if required
 	$chr = "chr${chr}" if $ch;
 
-  # Subset SNPs by region and MAF
-  print "Subsetting $gene $chr:$start-$end\n";
-  my $cmd = "$path{vcftools} --gzvcf $vcf --chr $chr --from-bp $start --to-bp $end --maf $maf --recode --out $gene";
-
-  system($cmd) == 0 or die "error: vcftools failed!";
-  rename "$gene.recode.vcf", "$gene.vcf";
+	# Subset SNPs by region and MAF
+	print "Subsetting $gene $chr:$start-$end\n";
+	my $cmd = "$path{vcftools} --gzvcf $vcf1 --chr $chr --from-bp $start --to-bp $end --maf $maf --recode --out $gene";
+	system($cmd) == 0 or die "error: vcftools failed!";
+	rename "$gene.recode.vcf", $vcf2;
 	
-	# Get the number of variants
-	my $n = `grep -cv "^#" $gene.vcf`;
+	# Get the number of variants subsetted 
+	my $n = `grep -cv "^#" $vcf2`;
 	chomp $n;
+	print "Number of variants: $n\n";
 	return if $n == 0;
 
-  # Get statistics
-  $vcf = "$gene.vcf"; 
-  $cmd = "$path{vcftools} --vcf $vcf --hap-r2 --out $gene";
-  system($cmd) == 0 or die "error: vcftools failed!";
-  $cmd = "$path{vcftools} --vcf $vcf --freq2 --out $gene";
-  system($cmd) == 0 or die "error: vcftools failed!";
-  #$cmd = "$path{vcftools} --vcf $vcf --geno-r2 --min-r2 0.5 --out $gene";
-  #system($cmd) == 0 or die "error: vcftools failed!";
+	# Estimate r2
+	if ($n > 1) {
+		$cmd = "$path{vcftools} --vcf $vcf2 --hap-r2 --out $gene";
+		system($cmd) == 0 or die "error: vcftools failed!";
+	}
+
+	# Estimate frequencies
+	$cmd = "$path{vcftools} --vcf $vcf2 --freq2 --out $gene";
+	system($cmd) == 0 or die "error: vcftools failed!";
+	
+	#$cmd = "$path{vcftools} --vcf $vcf2 --geno-r2 --min-r2 0.5 --out $gene";
+	#system($cmd) == 0 or die "error: vcftools failed!";
 }
 
 sub read_resources {
